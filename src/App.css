@@ -1,38 +1,92 @@
 @import 'tailwindcss';
 
 @theme {
+  --content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
+
+  --border-radius-button-default: 5px;
+  --border-radius-tag-button: 15px;
+
+  --font-family-body: "Noto Sans KR";
+
+  --font-size-xs: 12px;
+  --line-height-xs: 18px;
+  --letter-spacing-xs: 0;
+  --font-weight-xs: 400;
+
+  --font-size-sm: 14px;
+  --line-height-sm: 21px;
+  --letter-spacing-sm: 0;
+  --font-weight-sm: 400;
+
+  --font-size-base: 16px;
+  --line-height-base: 24px;
+  --letter-spacing-base: 0;
+  --font-weight-base: 400;
+
+  --font-size-xl: 20px;
+  --line-height-xl: 30px;
+  --letter-spacing-xl: 0;
+  --font-weight-xl: 400;
+
+  --font-size-2xl: 24px;
+  --line-height-2xl: 36px;
+  --letter-spacing-2xl: 0;
+  --font-weight-2xl: 700;
+
   --color-primary: #1d2745;
   --color-secondary: #1de5d4;
-  --color-tertiary: #1d2745;
+  --color-tertiary: #f52c50;
   --color-white: #ffffff;
   --color-mono100: #f1f1f1;
   --color-mono200: #bebebe;
   --color-mono300: #d6d7d9;
   --color-error: #d01e1e;
   --color-social: #395997;
+  --color-dark-opacity: rgba(255, 255, 255, 0.1);
 
-  --text-xs: 0.5rem;
-  --text-xs--line-height: calc(0.75 / 0.5);
-  --text-xs--letter-spacing: 0;
-  --text-xs--font-weight: 400;
+  --text-primary: #1d2745;
+  --text-secondary: #1de5d4;
+  --text-tertiary: #f52c50;
+  --text-white: #ffffff;
+  --text-mono100: #f1f1f1;
+  --text-mono200: #bebebe;
+  --text-mono300: #d6d7d9;
+  --text-error: #d01e1e;
+  --text-social: #395997;
+  --text-dark-opacity: rgba(255, 255, 255, 0.1);
+}
 
-  --text-sm: 0.75rem;
-  --text-sm--line-height: calc(1 / 0.75);
-  --text-sm--letter-spacing: 0;
-  --text-sm--font-weight: 400;
+@utility text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-xs);
+  font-weight: var(--font-weight-xs);
+}
 
-  --text-base: 1rem;
-  --text-base--line-height: calc(1.25 / 1);
-  --text-base--letter-spacing: 0;
-  --text-base--font-weight: 400;
+@utility text-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  letter-spacing: var(--letter-spacing-sm);
+  font-weight: var(--font-weight-sm);
+}
 
-  --text-xl: 1.25rem;
-  --text-xl--line-height: calc(1.5 / 1.25);
-  --text-xl--letter-spacing: 0;
-  --text-xl--font-weight: 400;
+@utility text-base {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  font-weight: var(--font-weight-base);
+}
 
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: calc(1.75 / 1.5);
-  --text-2xl--letter-spacing: 0;
-  --text-2xl--font-weight: 700;
+@utility text-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  letter-spacing: var(--letter-spacing-xl);
+  font-weight: var(--font-weight-xl);
+}
+
+@utility text-2Xl {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-2xl);
+  letter-spacing: var(--letter-spacing-2xl);
+  font-weight: var(--font-weight-2xl);
 }

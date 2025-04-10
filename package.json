@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "index.css",
+    "src/components/",
+    "src/styles/",
+    "public/icons/"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
