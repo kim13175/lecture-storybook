@@ -14,6 +14,14 @@ const config: StorybookConfig = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
+  },
+  async viteFinal(config) {
+    return {
+      ...config,
+      css: {
+        preprocessorOptions: {}
+      }
+    };
   }
 };
 export default config;
