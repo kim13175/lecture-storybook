@@ -20,6 +20,7 @@ const meta = {
         onChange: { action: 'changed', description: '텍스트 필드 값 변경 이벤트' },
         onIconClick: { action: "clicked", description: '버튼 클릭 이벤트' },
         isError: {control: 'boolean', description: '에러 상태 여부', defaultValue: false },
+        id: {control: 'text', description: 'input 필드 id', defaultValue: ''},
     },
 } satisfies Meta<typeof DefaultTextField>;
 
@@ -36,5 +37,6 @@ export const Default: Story = {
         onIconClick: fn(),
         onChange: fn(),
         isError: false,
+        id: 'email',
     },
 };

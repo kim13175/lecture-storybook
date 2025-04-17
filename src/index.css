@@ -3,3 +3,10 @@
 body {
   font-family: 'Noto Sans Variable';
 }
+
+/* cls 방지, 불필요한 div 노드 추가 방지 */
+@layer components {
+  .text-field >p {
+    @apply absolute;
+  }
+}

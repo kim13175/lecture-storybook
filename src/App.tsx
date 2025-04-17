@@ -1,34 +1,41 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
+import Label from "./components/Label.tsx";
+import DefaultTextField from "./components/DefaultTextField.tsx";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isError, setIsError] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src='/icon/vite.svg' className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='flex flex-col items-center gap-4'>
+          <Label htmlFor='email'>이메일</Label>
+          <DefaultTextField
+              id='email'
+              errorMessage='이메일 형식을 맞춰서 입력해 주세요'
+              iconPath='/icon/ic-delete-dark.svg'
+              iconAlt='delete-value'
+              onIconClick={() => {}}
+              placeholder='이메일을 입력해 주세요.'
+              onChange={() => {}}
+              value=''
+              isError={isError}
+          />
+          <div className='my-20'></div>
+          <Label htmlFor='address'>주소</Label>
+          <DefaultTextField
+              id='address'
+              errorMessage='주소를 올바르게 입력해 주세요.'
+              iconPath='/icon/ic-delete-dark.svg'
+              iconAlt='delete-value'
+              onIconClick={() => {}}
+              placeholder='주소를 입력해 주세요.'
+              onChange={() => {}}
+              value=''
+              isError={isError}
+          />
+          <button onClick={() => setIsError((prev) => !prev)}>에러 토글</button>
       </div>
-      <h1 className='font-bold underline text-error'>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p className='text-xl font-thin'>
-          Edit <code className='text-2xl'>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs text-2xl">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
   )
 }
 
