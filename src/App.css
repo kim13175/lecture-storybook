@@ -66,7 +66,7 @@
   --text-social: #395997;
   --text-dark-opacity: rgba(255, 255, 255, 0.1);
 
-  --rounded-button: 10px;
+  --rounded-button: 25px;
 }
 
 @utility text-xs {
