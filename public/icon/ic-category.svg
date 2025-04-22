@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <!-- 배경 원 -->
+    <circle cx="100" cy="100" r="90" fill="#f5f5f5" stroke="#333" stroke-width="3"/>
+
+    <!-- 물음표 기호 -->
+    <path d="M85,70 C85,55 115,55 115,70 C115,90 95,90 95,110 L105,110 C105,95 125,95 125,70 C125,45 75,45 75,70 L85,70 Z"
+          fill="#333" stroke="none"/>
+    <circle cx="100" cy="135" r="8" fill="#333"/>
+</svg>
