@@ -22,7 +22,7 @@ jobs:
           TARGET_URL: '${{ github.event.deployment_status.target_url }}'
 
   chromatic:
-    needs: test
+    needs: accessibility-test
     name: Run Chromatic
     runs-on: ubuntu-latest
     steps:
