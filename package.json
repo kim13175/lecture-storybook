@@ -16,7 +16,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_49fb412d4a82ec8"
+    "chromatic": "npx chromatic --exit-zero-on-changes",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@fontsource-variable/noto-sans": "^5.2.6",
@@ -37,6 +38,7 @@
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
     "@storybook/test": "^8.6.12",
+    "@storybook/test-runner": "^0.22.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
