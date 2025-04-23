@@ -15,19 +15,6 @@ jobs:
         run: npm ci
       - name: Install Playwright
         run: npx playwright install --with-deps
-      
-          echo "Waiting for Storybook to start..."
-          timeout=120
-          while ! curl -s http://localhost:6006 > /dev/null; do
-            sleep 5
-            timeout=$((timeout - 5))
-            if [ $timeout -le 0 ]; then
-              echo "Timed out waiting for Storybook to start"
-              exit 1
-            fi
-          done
-          echo "Storybook is running"
-
       - name: Run Storybook tests
         run: npm run test-storybook -- --start-server
         env:
