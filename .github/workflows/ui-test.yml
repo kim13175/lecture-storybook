@@ -15,6 +15,10 @@ jobs:
         run: yarn
       - name: Install Playwright
         run: npx playwright install --with-deps
+      - name: Start Storybook in background
+        run: yarn storybook &
+      - name: Wait for Storybook to start
+        run: sleep 30
       - name: Run Storybook tests
         run: yarn test-storybook
         env:
