@@ -12,11 +12,11 @@ jobs:
         with:
           node-version: '20.17.0'
       - name: Install dependencies
-        run: yarn
+        run: npm ci
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Start Storybook in background
-        run: yarn storybook --ci --host 0.0.0.0 &
+        run: npm run storybook --ci --host 0.0.0.0 &
 
       - name: Wait for Storybook to start
         run: |
@@ -33,7 +33,7 @@ jobs:
           echo "Storybook is running"
 
       - name: Run Storybook tests
-        run: yarn test-storybook --url http://localhost:6006
+        run: npm run test-storybook --url http://localhost:6006
         env:
           TARGET_URL: '${{ github.event.deployment_status.target_url }}'
 
