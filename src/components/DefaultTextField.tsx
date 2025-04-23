@@ -43,7 +43,7 @@ export default function DefaultTextField({
                      focus: 
                      ${borderColor}
                 `}>
-                <input id={id} className='outline-none' type='text' placeholder={placeholder} onChange={onChange} value={value} />
+                <input id={id}  data-testId={id} className='outline-none' type='text' placeholder={placeholder} onChange={onChange} value={value} />
                 { !!value && <IconButton alt={iconAlt} iconPath={iconPath} onClick={onIconClick}/> }
             </div>
             { isError && <ErrorMessage>{errorMessage}</ErrorMessage> }
